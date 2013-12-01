@@ -1,0 +1,70 @@
+
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <link rel="stylesheet" type="text/css" href="CSS/style.css"/>
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css" type="text/css" media="all" />	
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>	<script type="text/javascript">
+		$(document).ready(function(){
+
+      $('#dialog').dialog();
+      $('#accordion').accordion();
+      $('#tabs').tabs();
+      $('.datepicker').datepicker();
+
+		});
+	</script>
+</head>
+
+<body>
+
+	<h1>JQueryUI</h1>
+
+  <div id="dialog" title="Fairy Tales">
+    <p>This is a page dedicated to fairy tales.</p>
+  </div>
+
+  <div id="accordion">
+    <h3>Little Red Riding Hood</h3>
+    <div>
+      <p>Once upon a time there was a little girl named Little Red Riding Hood.  Little Red's grandmother lived on the other side of the forest.  She wasn't well and Little Red went to see her everyday, bringing her tea and cookies.  The Big Bad Wolf watched Little Red make the trip to Grandmother's every day.  He thought she would make a wonderful meal.  He went to Grandmother's, hid Grandmother away, put on Grandmother's nightgown and nightcap and got into bed pretending to be Grandmother.</p>
+    </div>
+    <h3>The Three Little Pigs</h3>
+    <div>
+      <p>Once upon a time there were 3 little pigs.  The Big Bad Wolf thought they would make a wonderful meal.   The first little pig made his house of straw.  The second little pig made his house out of twigs.  The third little pig made his house out of bricks.  Obviously, the smart one.</p>
+    </div>
+    <h3>Snow White</h3>
+    <div>
+      <p>Once upon a time there was a princess named Snow White.  The Wicked Witch banished her to the woods.  She found a little house in the woods with 7 little beds.  The house belonged to 7 dwarfs.
+      </p>
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <div id="tabs">
+    <ul>
+      <li><a href="#tabs-1">Little Red Riding Hood</a></li>
+      <li><a href="#tabs-2">Three Little Pigs</a></li>
+      <li><a href="#tabs-3">Snow White</a></li>
+    </ul>
+    <div id="tabs-1">
+      <p>Once upon a time there was a little girl named Little Red Riding Hood.  Little Red's grandmother lived on the other side of the forest.  She wasn't well and Little Red went to see her everyday, bringing her tea and cookies.  The Big Bad Wolf watched Little Red make the trip to Grandmother's every day.  He thought she would make a wonderful meal.  He went to Grandmother's, hid Grandmother away, put on Grandmother's nightgown and nightcap and got into bed pretending to be Grandmother.</p>
+    </div>
+    <div id="tabs-2">
+      <p>Once upon a time there were 3 little pigs.  The Big Bad Wolf thought they would make a wonderful meal.   The first little pig made his house of straw.  The second little pig made his house out of twigs.  The third little pig made his house out of bricks.  Obviously, the smart one.</p>
+    </div>
+    <div id="tabs-3">
+      <p>Once upon a time there was a princess named Snow White.  The Wicked Witch banished her to the woods.  She found a little house in the woods with 7 little beds.  The house belonged to 7 dwarfs.
+      </p>
+      <p>The 7 dwarfs were miners working the local mine of beautiful, valuable jewels.  Everyday they whisteled as they worked.  At the end of the day they whistled their way back home.  One day, they came home to find a strange woman asleep in their house.</p>
+    </div>
+  </div>
+  <br>
+  <br>
+  From Date: <input class="datepicker" type="text"/>
+  To Date: <input class="datepicker" type="text"/>
+
+</body>
+
+</html>

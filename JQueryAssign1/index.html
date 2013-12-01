@@ -1,0 +1,53 @@
+
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css" type="text/css" media="all" />  
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script> 
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        $('#display_dates').hide();
+
+        $('.datepicker').datepicker();
+        $('#date_form').submit(function(){
+
+          var fromValue = $("#input_from_date").val();
+          $('#from_date').text(fromValue);
+          var toValue = $("#input_to_date").val();
+          $('#to_date').text(toValue);
+          $('#display_dates').show();
+          
+          //return false so that the form does not get submitted
+          return false;
+        });
+
+      });
+    </script>
+  </head>
+
+  <body>
+
+  	<h1>JQuery Assignment 2</h1>
+
+    <div id="display_dates">
+      Your date information:
+      <br>
+      From Date: <div id="from_date"></div>
+      <br>
+      To Date: <div id="to_date"></div>
+    </div>
+    <br>
+
+    From Date: <input id="input_from_date" class="datepicker" type="text"/>
+    To Date: <input id="input_to_date" class="datepicker" type="text"/>
+    <form action="test2.php" method="post" id="date_form">
+      <input type="submit" value="Submit" />
+    </form>
+
+
+
+  </body>
+
+</html>

@@ -1,0 +1,38 @@
+
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        $('img').click(function(){
+          $(this).hide();
+        });
+
+        $('#restore_button').click(function(){
+          console.log("restore button");
+          $('img').show();
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+
+  	<h1>JQuery Assignment 1</h1>
+    <img src="jquery-ninja.png", alt="Ninja"/>
+    <img src="jquery-ninja.png", alt="Ninja"/>
+    <img src="jquery-ninja.png", alt="Ninja"/>
+    <img src="jquery-ninja.png", alt="Ninja"/>
+    <img src="jquery-ninja.png", alt="Ninja"/>
+    <img src="jquery-ninja.png", alt="Ninja"/>
+    <img src="jquery-ninja.png", alt="Ninja"/>
+    <img src="jquery-ninja.png", alt="Ninja"/>
+    <br>
+    <button id="restore_button">Restore</button>
+
+
+  </body>
+
+</html>

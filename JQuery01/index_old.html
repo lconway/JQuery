@@ -1,0 +1,186 @@
+
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <link rel="stylesheet" type="text/css" href="CSS/style.css"/>
+
+  <script type="text/javascript" src="jquery/jquery-1.10.2.js"></script>
+
+	<script type="text/javascript">
+      $(document).ready(function(){
+
+      $('#click_me').click(function(){
+        alert('here');
+      });
+
+      $('#change_html').click(function(){
+        $('#html_to_change').html('<h2>H2 heading</h2>');
+      });
+
+      $('input').focus(){
+        
+      }
+      
+      $('#hide_me').click(function(){
+        $('#text_to_hide').hide();
+      });
+
+      $('#show_me').click(function(){
+        console.log('Show the text');
+        $('#text_to_hide').show();
+      });
+
+      $('#change_text').click(function(){
+        console.log('Change the text');
+        $('#text_to_hide').text("New Text Value");
+      });
+
+      $('#fade_in').click(function(){
+        $('#img_to_fade').fadeIn();
+      });
+
+      $('#fade_out').click(function(){
+        $('#img_to_fade').fadeOut();
+      });
+
+      $('#add_border').click(function(){
+        $('#img_to_fade').addClass("border");
+      });
+
+      $('#increase_width').click(function(){
+        $('#img_to_fade').attr("width", "200px");
+      });
+
+      $('#slide_down').click(function(){
+        $('#img_to_fade').slideDown();
+      });
+
+      $('#slide_up').click(function(){
+        $('#img_to_fade').slideUp();
+      });
+
+      $('#toggle_button').click(function(){
+        $('#sample_text').toggle('slow');
+      });
+
+      $('#slide_toggle').click(function(){
+        $('#sample_text').slideToggle();
+      });
+
+      $('#append_form').submit(function(){
+        console.log('Displaying information for the append_form');
+
+        console.log($('#append_form').serialize());
+
+        $('#append_text_area').append($('.append_text').val() + "<br />");
+        
+        //return false so that the form does not get submitted
+        return false;
+      });
+
+      $('#my_name').click(function(){
+        $('.before_text').val("My name is Lynn");
+      });
+
+
+      $('#before_form').submit(function(){
+        console.log('Displaying information for the before_form');
+
+        console.log($('#before_form').serialize());
+
+        $('#append_text_area').before($('.before_text').val() + "<br />");
+        
+        //return false so that the form does not get submitted
+        return false;
+      });
+
+      $('#after_form').submit(function(){
+        console.log('Displaying information for the after_form');
+
+        console.log($('#after_form').serialize());
+
+        $('#append_text_area').after($('.after_text').val() + "<br />");
+        
+        //return false so that the form does not get submitted
+        return false;
+      });
+		});
+	</script>
+</head>
+
+<body>
+
+	<h1>Alert</h1>
+	<button id="click_me">Click Me</button>
+
+  <h1>Change HTML</h1>
+  <p id="html_to_change">Change this paragraph to an h2</p>
+  <button id="change_html">Change HTML</button>
+
+  <h1>Set Focus</h1>
+  <input type="text"/>
+  <input type="text"/>
+
+  <h1 id="text_to_hide">Text to Hide</h1>
+  <button id="hide_me">Hide Me</button>
+  <button id="show_me">Show Me</button>
+  <button id="change_text">Change Text</button>
+
+	<h1>Toggle</h1>
+	<div id="sample_text">
+    Some sample text... Some sample text... Some sample text... Some sample text... Some sample text... 
+    Some sample text... Some sample text... Some sample text... Some sample text... Some sample text... 
+    Some sample text... Some sample text... Some sample text... Some sample text... Some sample text... 
+    Some sample text... Some sample text... Some sample text... Some sample text... Some sample text... 
+    Some sample text... Some sample text... Some sample text... Some sample text... Some sample text... 
+    Some sample text... Some sample text... Some sample text... Some sample text... Some sample text... 
+    Some sample text... Some sample text... Some sample text... Some sample text... Some sample text... 
+	</div>
+  <button id="toggle_button">Toggle</button>
+  <button id="slide_toggle">Slide Toggle</button>
+
+  <h1>FadeIn/Out</h1>
+  <img id="img_to_fade" src="lynn-conway.jpg" alt="Lynn">
+  <br>
+  <button id="fade_in">Fade In</button>
+  <button id="fade_out">Fade Out</button>
+
+  <br>
+  <button id="slide_down">Slide Down</button>
+  <button id="slide_up">Slide Up</button>
+
+  <br>
+  <button id="add_border">Add Border</button>
+  <button id="increase_width">Increase Width</button>
+
+
+  <h1>Append and Form Submission</h1>
+  <form action="test2.php" method="post" id="append_form">
+    Text to Add: 
+    <input type="text" class="append_text" name="append_text_name" value="" />
+    <input type="submit" value="Append" />
+  </form>
+
+  <h1>Before and Form Submission</h1>
+  <form action="test2.php" method="post" id="before_form">
+    Text to Add: 
+    <input type="text" class="before_text" name="before_text_name" value="" />
+    <input type="submit" value="Before" />
+  </form>
+  <button id="my_name">Set Input to Lynn</button>
+
+
+  <h1>After and Form Submission</h1>
+  <form action="test2.php" method="post" id="after_form">
+    Text to Add: 
+    <input type="text" class="after_text" name="after_text_name" value="" />
+    <input type="submit" value="After" />
+  </form>
+
+  <h2>Text Area Start</h2>
+  <div id="append_text_area"></div>
+  <h2>Text Area End</h2>
+
+</body>
+
+</html>
